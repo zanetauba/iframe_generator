@@ -25,7 +25,7 @@ class SingleController < ApplicationController
     @single.update(params[:single])
   end
 
-  def destroy       # DELETE /bookings/:id
+  def destroy       # DELETE /singles/:id
     @single.destroy
   end
 
@@ -35,7 +35,7 @@ private
     params.require(:single).permit(:element, :iframe, :comment)
   end
 
-  def set_listing
+  def set_single
     @single = Single.find(params[:id])
   end
 
