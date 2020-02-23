@@ -1,5 +1,5 @@
 class DoubleController < ApplicationController
-  class SingleController < ApplicationController
+
 
   def index         # GET /doubles
     @doubles = Double.all
@@ -42,4 +42,3 @@ private
 
 end
 
-end
