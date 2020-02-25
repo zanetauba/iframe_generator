@@ -1,4 +1,4 @@
-class SingleController < ApplicationController
+class SinglesController < ApplicationController
 
   def index         # GET /singles
     @singles = Single.all
