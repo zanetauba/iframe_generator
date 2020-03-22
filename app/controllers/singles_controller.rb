@@ -16,6 +16,12 @@ class SinglesController < ApplicationController
     @single = Single.new(single_params)
     @single.user_id = current_user.id
     @single.save
+
+    if @single.save
+      redirect_to single_path(@single)
+    else
+      render 'new'
+    end
   end
 
   def edit          # GET /singles/:id/edit
