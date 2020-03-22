@@ -1,0 +1,5 @@
+<ul>
+  <li>Browser: wmjQuery("<%=@triple.element%>",wmjQuery("iframe<%=@triple.iframe3%>",wmjQuery("#iframe<%=@triple.iframe2%>",wmjQuery("iframe<%=@triple.iframe1%>").contents()).contents()).contents())</li>
+  <li>Editor: {"element": "<%=@triple.element%>", "context": { "element": "iframe<%=@triple.iframe3%>", "context": { "element": "<%=@triple.iframe2%>", "context": "<%=@triple.iframe1%>"}}}</li>
+  <li>Comment: <%=@triple.comment%></li>
+</ul>
