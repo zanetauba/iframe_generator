@@ -1,4 +1,4 @@
-class TripleController < ApplicationController
+class TriplesController < ApplicationController
 
   def index         # GET /triples
     @triples = Triple.all
@@ -16,6 +16,12 @@ class TripleController < ApplicationController
     @triple = Triple.new(triple_params)
     @triple.user_id = current_user.id
     @triple.save
+
+    if @triple.save
+      redirect_to triple_path(@triple)
+    else
+      render 'new'
+    end
   end
 
   def edit          # GET /triples/:id/edit
