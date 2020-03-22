@@ -1,4 +1,4 @@
-class DoubleController < ApplicationController
+class DoublesController < ApplicationController
 
 
   def index         # GET /doubles
@@ -17,6 +17,12 @@ class DoubleController < ApplicationController
     @double = Double.new(double_params)
     @double.user_id = current_user.id
     @double.save
+
+    if @double.save
+      redirect_to double_path(@double)
+    else
+      render 'new'
+    end
   end
 
   def edit          # GET /doubles/:id/edit
