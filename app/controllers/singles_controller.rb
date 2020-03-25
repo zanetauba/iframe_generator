@@ -1,9 +1,5 @@
 class SinglesController < ApplicationController
 
-  def index         # GET /singles
-    @singles = Single.all
-  end
-
   def show          # GET /singles/:id
     @single = Single.find(params[:id])
   end
@@ -14,7 +10,6 @@ class SinglesController < ApplicationController
 
   def create        # POST /singles
     @single = Single.new(single_params)
-    @single.user_id = current_user.id
     @single.save
 
     if @single.save
@@ -24,13 +19,6 @@ class SinglesController < ApplicationController
     end
   end
 
-  def edit          # GET /singles/:id/edit
-  end
-
-  def update        # PATCH /singles/:id
-    @single.update(params[:single])
-  end
-
   def destroy       # DELETE /singles/:id
     @single.destroy
   end
@@ -38,7 +26,7 @@ class SinglesController < ApplicationController
 private
 
   def single_params
-    params.require(:single).permit(:element, :iframe, :comment)
+    params.require(:single).permit(:element, :iframe)
   end
 
   def set_single

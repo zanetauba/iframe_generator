@@ -1,9 +1,5 @@
 class TriplesController < ApplicationController
 
-  def index         # GET /triples
-    @triples = Triple.all
-  end
-
   def show          # GET /triples/:id
     @triple = Triple.find(params[:id])
   end
@@ -14,7 +10,7 @@ class TriplesController < ApplicationController
 
   def create        # POST /triples
     @triple = Triple.new(triple_params)
-    @triple.user_id = current_user.id
+  #  @triple.user_id = current_user.id
     @triple.save
 
     if @triple.save
@@ -24,13 +20,6 @@ class TriplesController < ApplicationController
     end
   end
 
-  def edit          # GET /triples/:id/edit
-  end
-
-  def update        # PATCH /triples/:id
-    @triple.update(params[:triple])
-  end
-
   def destroy       # DELETE /triples/:id
     @triple.destroy
   end
@@ -38,7 +27,7 @@ class TriplesController < ApplicationController
 private
 
   def triple_params
-    params.require(:triple).permit(:element, :iframe1, :iframe2, :iframe3, :comment)
+    params.require(:triple).permit(:element, :iframe1, :iframe2, :iframe3)
   end
 
   def set_triple

@@ -1,8 +1,7 @@
-<%= link_to "Create new", new_single_path, class: "btn btn-primary" %>
+<%= link_to "Create new", root_path, class: "btn btn-primary" %>
 
 
 <ul>
    <li>Browser: wmjQuery("<%=@single.element%>",wmjQuery("iframe<%=@single.iframe%>").contents())</li>
    <li>Editor: {"element": "<%=@single.element%>" ,"context": "iframe<%=@single.iframe%>"}</li>
-   <li>Comment: <%=@single.comment%></li>
 </ul>

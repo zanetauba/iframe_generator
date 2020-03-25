@@ -1,7 +1,6 @@
-<%= link_to "Create new", new_double_path, class: "btn btn-primary" %>
+<%= link_to "Create new", root_path, class: "btn btn-primary" %>
 
 <ul>
   <li>Browser: wmjQuery("<%=@double.element%>",wmjQuery("iframe<%=@double.iframe2%>",wmjQuery("iframe<%=@double.iframe1%>").contents()).contents())</li>
   <li>Editor: {"element":"<%=@double.element%>","context":{"element":"iframe<%=@double.iframe2%>","context":"iframe<%=@double.iframe1%>"}}</li>
-  <li>Comment: <%=@double.comment%></li>
 </ul>
