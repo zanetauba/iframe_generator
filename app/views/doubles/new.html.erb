@@ -1,8 +1,8 @@
 <%= simple_form_for @double do |f| %>
   <div class="form-inputs">
     <%= f.input :element %>
-    <%= f.input :iframe1 %>
-    <%= f.input :iframe2 %>
+    <%= f.input :iframe1, label: 'Main iframe selector'%>
+    <%= f.input :iframe2, label: 'Iframe inside iframe selector' %>
   </div>
   <div class="form-actions">
     <%= f.button :submit, class: 'btn btn-primary' %>
