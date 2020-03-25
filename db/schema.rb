@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_02_23_190617) do
+ActiveRecord::Schema.define(version: 2020_03_25_184032) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -19,21 +19,15 @@ ActiveRecord::Schema.define(version: 2020_02_23_190617) do
     t.text "element"
     t.text "iframe1"
     t.text "iframe2"
-    t.string "comment"
-    t.bigint "user_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["user_id"], name: "index_doubles_on_user_id"
   end
 
   create_table "singles", force: :cascade do |t|
     t.text "element"
     t.text "iframe"
-    t.string "comment"
-    t.bigint "user_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["user_id"], name: "index_singles_on_user_id"
   end
 
   create_table "triples", force: :cascade do |t|
@@ -41,26 +35,8 @@ ActiveRecord::Schema.define(version: 2020_02_23_190617) do
     t.text "iframe1"
     t.text "iframe2"
     t.text "iframe3"
-    t.string "comment"
-    t.bigint "user_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["user_id"], name: "index_triples_on_user_id"
   end
 
-  create_table "users", force: :cascade do |t|
-    t.string "email", default: "", null: false
-    t.string "encrypted_password", default: "", null: false
-    t.string "reset_password_token"
-    t.datetime "reset_password_sent_at"
-    t.datetime "remember_created_at"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.index ["email"], name: "index_users_on_email", unique: true
-    t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
-  end
-
-  add_foreign_key "doubles", "users"
-  add_foreign_key "singles", "users"
-  add_foreign_key "triples", "users"
 end
