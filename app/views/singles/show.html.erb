@@ -1,7 +1,19 @@
 <%= link_to "Create new", root_path, class: "btn btn-primary" %>
 
-
 <ul>
-   <li>Browser: wmjQuery("<%=@single.element%>",wmjQuery("iframe<%=@single.iframe%>").contents())</li>
-   <li>Editor: {"element": "<%=@single.element%>" ,"context": "iframe<%=@single.iframe%>"}</li>
+  <li>
+    Browser: <p id="browser-single-copy">wmjQuery("<%=@single.element%>",wmjQuery("iframe<%=@single.iframe%>").contents())</p>
+      <button class="clipboard-btn-custom" data-clipboard-action="copy" data-clipboard-target="#browser-single-copy">
+        Copy
+      </button>
+  </li>
+  <li>
+    Editor: <p id="editor-single-copy">{"element": "<%=@single.element%>" ,"context": "iframe<%=@single.iframe%>"}</p>
+      <button class="clipboard-btn-custom" data-clipboard-action="copy" data-clipboard-target="#editor-single-copy">
+        Copy
+      </button>
+  </li>
 </ul>
+
+
+

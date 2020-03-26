@@ -1,6 +1,16 @@
 <%= link_to "Create new", root_path, class: "btn btn-primary" %>
 
 <ul>
-  <li>Browser: wmjQuery("<%=@triple.element%>",wmjQuery("iframe<%=@triple.iframe3%>",wmjQuery("#iframe<%=@triple.iframe2%>",wmjQuery("iframe<%=@triple.iframe1%>").contents()).contents()).contents())</li>
-  <li>Editor: {"element": "<%=@triple.element%>", "context": { "element": "iframe<%=@triple.iframe3%>", "context": { "element": "<%=@triple.iframe2%>", "context": "<%=@triple.iframe1%>"}}}</li>
+  <li>
+    Browser: <p id="browser-triple-copy">wmjQuery("<%=@triple.element%>",wmjQuery("iframe<%=@triple.iframe3%>",wmjQuery("#iframe<%=@triple.iframe2%>",wmjQuery("iframe<%=@triple.iframe1%>").contents()).contents()).contents())</p>
+    <button class="clipboard-btn-custom" data-clipboard-action="copy" data-clipboard-target="#browser-triple-copy">
+      Copy
+    </button>
+  </li>
+  <li>
+    Editor: <p id="editor-triple-copy">{"element": "<%=@triple.element%>", "context": { "element": "iframe<%=@triple.iframe3%>", "context": { "element": "<%=@triple.iframe2%>", "context": "<%=@triple.iframe1%>"}}}</p>
+    <button class="clipboard-btn-custom" data-clipboard-action="copy" data-clipboard-target="#editor-triple-copy">
+      Copy
+    </button>
+  </li>
 </ul>
