@@ -1,6 +1,16 @@
 <%= link_to "Create new", root_path, class: "btn btn-primary" %>
 
 <ul>
-  <li>Browser: wmjQuery("<%=@double.element%>",wmjQuery("iframe<%=@double.iframe2%>",wmjQuery("iframe<%=@double.iframe1%>").contents()).contents())</li>
-  <li>Editor: {"element":"<%=@double.element%>","context":{"element":"iframe<%=@double.iframe2%>","context":"iframe<%=@double.iframe1%>"}}</li>
+  <li>
+    Browser: <p id="browser-double-copy">wmjQuery("<%=@double.element%>",wmjQuery("iframe<%=@double.iframe2%>",wmjQuery("iframe<%=@double.iframe1%>").contents()).contents())</p>
+    <button class="clipboard-btn-custom" data-clipboard-action="copy" data-clipboard-target="#browser-double-copy">
+      Copy
+    </button>
+  </li>
+  <li>
+    Editor: <p id="editor-double-copy">{"element":"<%=@double.element%>","context":{"element":"iframe<%=@double.iframe2%>","context":"iframe<%=@double.iframe1%>"}}</p>
+    <button class="clipboard-btn-custom" data-clipboard-action="copy" data-clipboard-target="#editor-double-copy">
+      Copy
+    </button>
+  </li>
 </ul>
