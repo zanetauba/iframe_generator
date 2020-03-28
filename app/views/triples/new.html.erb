@@ -1,11 +1,15 @@
-<%= simple_form_for @triple do |f| %>
-  <div class="form-inputs">
-    <%= f.input :element %>
-    <%= f.input :iframe1, label: 'Main iframe selector'%>
-    <%= f.input :iframe2, label: 'Middle iframe selector'%>
-    <%= f.input :iframe3, label: 'Third iframe selector' %>
+<div class="container">
+  <div class="white-wrapper">
+    <%= simple_form_for @triple do |f| %>
+      <div class="form-inputs">
+        <%= f.input :element %>
+        <%= f.input :iframe1, label: 'Main iframe selector'%>
+        <%= f.input :iframe2, label: 'Middle iframe selector'%>
+        <%= f.input :iframe3, label: 'Third iframe selector' %>
+      </div>
+      <div class="form-actions">
+        <%= f.button :submit, class: 'btn-submit-triple' %>
+      </div>
+    <% end %>
   </div>
-  <div class="form-actions">
-    <%= f.button :submit, class: 'btn btn-primary' %>
-  </div>
-<% end %>
+</div>

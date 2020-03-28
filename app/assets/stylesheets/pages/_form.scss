@@ -1,0 +1,81 @@
+
+.form-control {
+  background: white;
+  padding: 10px 20px;
+  margin-top: 10px;
+  border-radius: 6px;
+  box-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+  min-width: 30vw;
+  max-width: 35vw;
+  min-height: 6vh;
+  max-height: 8vh;
+}
+
+textarea {
+  resize: none;
+}
+
+.form-inputs {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.form-group{
+  display: flex;
+  padding-bottom: 1vh;
+
+}
+
+.optional {
+  justify-self: center;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.simple_form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.btn-submit-single, .btn-submit-double, .btn-submit-triple {
+  color: white;
+  padding: 8px 24px;
+  border-radius: 4px;
+  transition: background 0.3s ease;
+  margin-top: 2vh;
+}
+
+.btn-submit-single:hover, .btn-submit-double:hover, .btn-submit-triple:hover {
+  background: #0477db;
+  color: white;
+}
+
+
+.btn-submit-single {
+  background: #0088ff;
+}
+.btn-submit-single:hover{
+  background: #0477db;
+}
+
+.btn-submit-double{
+  background: #ffd42b;
+}
+
+.btn-submit-double:hover{
+  background: #f9c60c;
+}
+
+.btn-submit-triple {
+  background: #f75151;
+}
+
+.btn-submit-triple:hover {
+  background: #e02121;
+
+}
