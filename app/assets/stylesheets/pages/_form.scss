@@ -24,6 +24,9 @@ textarea {
 
 .form-group{
   display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   padding-bottom: 1vh;
 
 }
@@ -77,5 +80,14 @@ textarea {
 
 .btn-submit-triple:hover {
   background: #e02121;
+}
 
+.invalid-feedback {
+  font-weight: 400;
+  font-size: 0.7vw;
+  text-align: right;
+}
+
+abbr {
+  display: none;
 }
