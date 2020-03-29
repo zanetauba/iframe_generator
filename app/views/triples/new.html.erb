@@ -2,7 +2,7 @@
   <div class="white-wrapper">
     <%= simple_form_for @triple do |f| %>
       <div class="form-inputs">
-        <%= f.input :element %>
+        <%= f.input :element, error: 'This field is required' %>
         <%= f.input :iframe1, label: 'Main iframe selector', error: 'This field is required'%>
         <%= f.input :iframe2, label: 'Middle iframe selector', error: 'This field is required'%>
         <%= f.input :iframe3, label: 'Third iframe selector', error: 'This field is required' %>
