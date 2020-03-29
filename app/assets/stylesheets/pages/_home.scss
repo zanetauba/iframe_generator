@@ -1,4 +1,8 @@
 // Specific CSS for your home-page
+h1 {
+  text-align: center;
+}
+
 .container {
   display: flex;
   justify-content: center;
@@ -47,6 +51,7 @@
   font-weight: bold;
   padding: 16px 200px;
   text-decoration:none;
+  text-align: center;
 }
 .btn-single:hover, .btn-double:hover, .btn-triple:hover {
   color: white;
@@ -79,4 +84,30 @@
 
 .btn-triple:hover{
   background-color: #f75151;
+}
+
+
+@media only screen and (max-width: 768px) {
+
+  h1 {
+    font-size: 20px;
+  }
+
+  .btn-single, .btn-double, .btn-triple {
+    padding: 8px 60px;
+  }
+}
+
+
+@media only screen and (min-width: 767px) and (max-width: 992px) {
+
+  h1 {
+    font-size: 30px;
+  }
+
+  .btn-single, .btn-double, .btn-triple {
+    padding: 12px 120px;
+  }
+
+
 }

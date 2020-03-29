@@ -17,3 +17,24 @@
 .fa-heart {
   color: #D23333;
 }
+
+@media only screen and (max-width: 768px) {
+
+  .uba {
+    font-size: 10px;
+    margin-right: 15px;
+  }
+
+  .navbar-lewagon .navbar-brand img {
+    width: 40px;
+  }
+}
+
+@media only screen and (min-width: 767px) and (max-width: 992px) {
+
+  .uba {
+    font-size: 14px;
+    margin-right: 15px;
+  }
+
+}

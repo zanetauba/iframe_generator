@@ -1,5 +1,7 @@
 ul {
   list-style: none;
+  padding-inline-start: 0px;
+  padding-left: 0px;
 }
 
 li {
@@ -9,7 +11,7 @@ li {
 
 #browser-single-copy, #editor-single-copy, #browser-double-copy, #editor-double-copy, #browser-triple-copy, #editor-triple-copy {
   font-weight: lighter;
-  font-size: 1.1vw;
+  font-size: 22px;
   justify-content: center;
 }
 
@@ -48,4 +50,61 @@ li {
   background: #1BCB7F;
   color: white;
   text-decoration: none;
+}
+
+
+@media only screen and (max-width: 768px) {
+
+  #browser-single-copy, #editor-single-copy, #browser-double-copy, #editor-double-copy, #browser-triple-copy, #editor-triple-copy {
+    font-size: 16px;
+    max-width: 70vw;
+    word-break: break-word;
+  }
+
+  ul {
+    padding-inline-start: 0px;
+    padding-left: 0px;
+  }
+
+  .inline-text {
+    font-size: 18px;
+  }
+
+  .clipboard-btn-custom {
+    font-size: 20px;
+  }
+
+  .btn-create-new {
+    font-size: 16px;
+    padding: 6px 14px;
+  }
+
+}
+
+@media only screen and (min-width: 767px) and (max-width: 992px) {
+
+  #browser-single-copy, #editor-single-copy, #browser-double-copy, #editor-double-copy, #browser-triple-copy, #editor-triple-copy {
+    font-size: 16px;
+    max-width: 70vw;
+    word-break: break-word;
+  }
+
+  ul {
+    padding-inline-start: 0px;
+    padding-left: 0px;
+  }
+
+  .inline-text {
+    font-size: 18px;
+  }
+
+  .clipboard-btn-custom {
+    font-size: 18px;
+  }
+
+  .btn-create-new {
+    font-size: 16px;
+    padding: 8px 18px;
+  }
+
 }
