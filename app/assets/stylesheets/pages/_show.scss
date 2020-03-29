@@ -1,0 +1,51 @@
+ul {
+  list-style: none;
+}
+
+li {
+  padding-top: 5vh;
+  text-align: center;
+}
+
+#browser-single-copy, #editor-single-copy, #browser-double-copy, #editor-double-copy, #browser-triple-copy, #editor-triple-copy {
+  font-weight: lighter;
+  font-size: 1.1vw;
+  justify-content: center;
+}
+
+.clipboard-btn-custom {
+  background-color: transparent;
+  border-color: transparent;
+  color: #1EDD88;
+  margin-left: 0.8vw;
+}
+
+.clipboard-btn-custom:focus {
+  outline: transparent;
+  color: white;
+  background-color: #1EDD88;
+  border-radius: 4px;
+}
+
+.inline-text {
+  display: flex;
+  font-size: 1.3vw;
+  align-items: baseline;
+  justify-content: center;
+}
+
+.btn-create-new {
+  color: white;
+  padding: 8px 24px;
+  border-radius: 8px;
+  background: #1EDD88;
+  transition: background 0.3s ease;
+  font-weight: 400;
+  font-size: 20px;
+}
+
+.btn-create-new:hover {
+  background: #1BCB7F;
+  color: white;
+  text-decoration: none;
+}

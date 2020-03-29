@@ -1,19 +1,26 @@
-<%= link_to "Create new", root_path, class: "btn btn-primary" %>
-
-<ul>
-  <li>
-    Browser: <p id="browser-single-copy">wmjQuery("<%=@single.element%>",wmjQuery("iframe<%=@single.iframe%>").contents())</p>
-      <button class="clipboard-btn-custom" data-clipboard-action="copy" data-clipboard-target="#browser-single-copy">
-        Copy
-      </button>
-  </li>
-  <li>
-    Editor: <p id="editor-single-copy">{"element": "<%=@single.element%>" ,"context": "iframe<%=@single.iframe%>"}</p>
-      <button class="clipboard-btn-custom" data-clipboard-action="copy" data-clipboard-target="#editor-single-copy">
-        Copy
-      </button>
-  </li>
-</ul>
+<div class="container">
+  <div class="white-wrapper">
+    <ul>
+      <li>
+        <p class="inline-text">Browser:</p>
+        <p id="browser-single-copy" class="inline-text">wmjQuery("<%=@single.element%>",wmjQuery("iframe<%=@single.iframe%>").contents())
+            <button class="clipboard-btn-custom" data-clipboard-action="copy" data-clipboard-target="#browser-single-copy"><i class="far fa-copy"></i>
+            </button>
+        </p>
+      </li>
+      <li>
+        <p class="inline-text">Editor:</p>
+        <p id="editor-single-copy" class="inline-text">{"element": "<%=@single.element%>" ,"context": "iframe<%=@single.iframe%>"}
+          <button class="clipboard-btn-custom" data-clipboard-action="copy" data-clipboard-target="#editor-single-copy"><i class="far fa-copy"></i>
+          </button>
+        </p>
+      </li>
+      <li>
+        <p class="inline-text"><%= link_to "Create new", root_path, class: "btn-create-new" %></p>
+      </li>
+    </ul>
+  </div>
+</div>
 
 
 

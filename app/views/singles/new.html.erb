@@ -2,8 +2,8 @@
   <div class="white-wrapper">
     <%= simple_form_for @single do |f| %>
       <div class="form-inputs">
-        <%= f.input :element %>
-        <%= f.input :iframe %>
+        <%= f.input :element, required: true %>
+        <%= f.input :iframe, required: true %>
       </div>
       <div class="form-actions">
         <%= f.button :submit, class: 'btn-submit-single' %>

@@ -1,16 +1,23 @@
-<%= link_to "Create new", root_path, class: "btn btn-primary" %>
-
-<ul>
-  <li>
-    Browser: <p id="browser-double-copy">wmjQuery("<%=@double.element%>",wmjQuery("iframe<%=@double.iframe2%>",wmjQuery("iframe<%=@double.iframe1%>").contents()).contents())</p>
-    <button class="clipboard-btn-custom" data-clipboard-action="copy" data-clipboard-target="#browser-double-copy">
-      Copy
-    </button>
-  </li>
-  <li>
-    Editor: <p id="editor-double-copy">{"element":"<%=@double.element%>","context":{"element":"iframe<%=@double.iframe2%>","context":"iframe<%=@double.iframe1%>"}}</p>
-    <button class="clipboard-btn-custom" data-clipboard-action="copy" data-clipboard-target="#editor-double-copy">
-      Copy
-    </button>
-  </li>
-</ul>
+<div class="container">
+  <div class="white-wrapper">
+    <ul>
+      <li>
+        <p class="inline-text">Browser:</p>
+        <p id="browser-double-copy">wmjQuery("<%=@double.element%>",wmjQuery("iframe<%=@double.iframe2%>",wmjQuery("iframe<%=@double.iframe1%>").contents()).contents())
+          <button class="clipboard-btn-custom" data-clipboard-action="copy" data-clipboard-target="#browser-double-copy"><i class="far fa-copy"></i>
+          </button>
+        </p>
+      </li>
+      <li>
+        <p class="inline-text">Editor:</p>
+        <p id="editor-double-copy">{"element":"<%=@double.element%>","context":{"element":"iframe<%=@double.iframe2%>","context":"iframe<%=@double.iframe1%>"}}
+          <button class="clipboard-btn-custom" data-clipboard-action="copy" data-clipboard-target="#editor-double-copy"><i class="far fa-copy"></i>
+          </button>
+         </p>
+      </li>
+      <li>
+        <p class="inline-text"><%= link_to "Create new", root_path, class: "btn-create-new" %></p>
+      </li>
+    </ul>
+  </div>
+</div>
